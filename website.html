@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J&G Software Solutions - Comprehensive Tech Services</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+    .hero-gradient {
+      position: relative;
+      overflow: hidden;
+      /* Overlay with a semi-transparent blue gradient over the background image */
+      background: 
+        linear-gradient(135deg, rgba(0,102,204,0.6), rgba(0,176,255,0.6)),
+        url('https://media.istockphoto.com/id/1830163120/photo/group-of-computer-programmers-talking-while-working-at-it-office.jpg?s=612x612&w=0&k=20&c=nnhMhZcifOMTSPiZJ72QUDVWxcSgCyth-2GQaDTgzx0=') no-repeat center center;
+      background-size: cover;
+      background-blend-mode: overlay;
+      color: white;
+    }
+    .feature-icon {
+      font-size: 3rem;
+      color: #0066cc;
+    }
+    /* Ensure the map fills its container */
+    #mapid {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header Section -->
+  <header class="hero-gradient text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <!-- Company Logo -->
+      <img src="https://img.freepik.com/premium-vector/creative-initial-letter-jg-logo-icon-design-template-elements_555601-343.jpg" 
+           alt="J&G Software Solutions Logo" 
+           class="mx-auto mb-4 w-32" />
+      <h1 class="text-5xl font-bold mb-4">J&G Software Solutions</h1>
+      <p class="text-xl max-w-2xl mx-auto">
+        Empowering Businesses and Individuals with Cutting-Edge Technology Solutions
+      </p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-center space-x-8">
+      <a href="#services" class="text-blue-600 hover:text-blue-800">Services</a>
+      <a href="#expertise" class="text-blue-600 hover:text-blue-800">Our Expertise</a>
+      <a href="#accessories" class="text-blue-600 hover:text-blue-800">Tech Accessories</a>
+      <a href="#contact" class="text-blue-600 hover:text-blue-800">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12">
+    <!-- Services Section -->
+    <section id="services" class="mb-16">
+      <h2 class="text-4xl font-semibold text-center mb-12">Our Comprehensive Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <div class="text-center mb-6">
+            <svg class="mx-auto h-16 w-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center">Custom Software Development</h3>
+          <p class="text-center">
+            Innovative, scalable software solutions tailored to your specific business needs. We transform your ideas into powerful, efficient applications.
+          </p>
+        </div>
+        <!-- Service 2 -->
+        <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <div class="text-center mb-6">
+            <svg class="mx-auto h-16 w-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center">Hardware Repair &amp; IT Management</h3>
+          <p class="text-center">
+            Comprehensive device repair and IT support. We fix all hardware devices including laptops, desktops, smartphones, tablets, and more. Ensuring your technology works perfectly.
+          </p>
+        </div>
+        <!-- Service 3 -->
+        <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <div class="text-center mb-6">
+            <svg class="mx-auto h-16 w-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center">Hardware Solutions</h3>
+          <p class="text-center">
+            Expert hardware installation and support. From system setup to diagnostics, we provide comprehensive solutions for all your hardware needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Accessories Store Section -->
+    <section id="accessories" class="mb-16">
+      <h2 class="text-4xl font-semibold text-center mb-12">Tech Accessories Store</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Accessory 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="https://redragonshop.com/cdn/shop/products/78KeysHot-SwappableCompactMechanicalKeyboard_2.png?v=1653373871&width=1946" 
+               alt="Computer Peripherals" 
+               class="w-full rounded-lg mb-4">
+          <h3 class="text-2xl font-bold mb-4">Computer Peripherals</h3>
+          <p>High-quality keyboards, mice, headsets, and other essential computer accessories.</p>
+        </div>
+        <!-- Accessory 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="https://evolvedchargers.com/cdn/shop/products/3-in-1-samsung-wireless-charging-station-for-samsung-galaxy-watch-5-pro-samsung-galaxy-s22-ultra-samsung-buds-pro-2-android_6.png?v=1694456843&width=2500" 
+               alt="Mobile Accessories" 
+               class="w-full rounded-lg mb-4">
+          <h3 class="text-2xl font-bold mb-4">Mobile Accessories</h3>
+          <p>Cases, screen protectors, chargers, and innovative mobile device add-ons.</p>
+        </div>
+        <!-- Accessory 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="https://image.made-in-china.com/202f0j00vDtqWruzZwcJ/19-Inch-6u-Data-Ceter-Cabinet-Network-Cabinet-Server-Cabinet-Rack-for-Optical-Fiber-Equipment-Telecommunications-Equipment-and-Switch-Equipment-CCTV-System-.webp" 
+               alt="Networking Solutions" 
+               class="w-full rounded-lg mb-4">
+          <h3 class="text-2xl font-bold mb-4">Networking Solutions</h3>
+          <p>Routers, network switches, cables, and other networking equipment for home and business.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Managers Section -->
+    <section id="managers" class="mb-16">
+      <h2 class="text-4xl font-semibold text-center mb-12">Our Managers</h2>
+      <div class="grid md:grid-cols-1 gap-8">
+        <!-- Manager 1 -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold mb-2">Jay Hun</h3>
+          <p class="text-gray-600 mb-2">Manager</p>
+          <p class="text-gray-600">
+            With over a decade of experience in the IT industry, Jay is a seasoned professional in software development, IT management, and project leadership. His expertise in cutting-edge technology solutions has been instrumental in driving innovation, optimizing processes, and propelling the company's success.
+          </p>
+        </div>
+        <!-- Manager 2 -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold mb-2">Luis</h3>
+          <p class="text-gray-600 mb-2">Manager</p>
+          <p class="text-gray-600">
+            With extensive expertise in hardware installation, system diagnostics, and network infrastructure, Luis plays a vital role in delivering reliable and efficient hardware solutions. His strong technical acumen ensures seamless system performance and optimal functionality for our clients.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hiring Section -->
+    <section id="careers" class="bg-white rounded-lg shadow-md p-12 mb-16">
+      <h2 class="text-4xl font-semibold text-center mb-8">We're Hiring</h2>
+      <p class="text-center mb-8">
+        We're excited to expand our team! If you are a motivated individual looking to make an impact in the technology industry, we want to hear from you.
+      </p>
+      <ul class="list-disc list-inside max-w-xl mx-auto text-lg mb-8">
+        <li>Currently enrolled in or holding a Master’s degree in Computer Science (or a related field)</li>
+        <li>Strong communication and teamwork skills</li>
+        <li>A passion for innovation and problem-solving</li>
+        <li>Adaptability and a willingness to learn new technologies</li>
+      </ul>
+      <p class="text-center mb-8">
+        Please submit your resume and cover letter along with a brief introduction about yourself.
+      </p>
+      <form class="max-w-lg mx-auto" action="#" method="post" enctype="multipart/form-data" id="careerForm">
+        <div class="mb-4">
+          <label for="applicantName" class="block mb-2">Name</label>
+          <input type="text" id="applicantName" name="applicantName" class="w-full px-3 py-2 border rounded-lg" required>
+        </div>
+        <div class="mb-4">
+          <label for="applicantEmail" class="block mb-2">Email</label>
+          <input type="email" id="applicantEmail" name="applicantEmail" class="w-full px-3 py-2 border rounded-lg" required>
+        </div>
+        <div class="mb-4">
+          <label for="resume" class="block mb-2">Resume</label>
+          <input type="file" id="resume" name="resume" class="w-full px-3 py-2 border rounded-lg" accept=".pdf,.doc,.docx" required>
+        </div>
+        <div class="mb-4">
+          <label for="coverLetter" class="block mb-2">Cover Letter</label>
+          <input type="file" id="coverLetter" name="coverLetter" class="w-full px-3 py-2 border rounded-lg" accept=".pdf,.doc,.docx" required>
+        </div>
+        <div class="mb-4">
+          <label for="applicantMessage" class="block mb-2">Additional Information (optional)</label>
+          <textarea id="applicantMessage" name="applicantMessage" rows="4" class="w-full px-3 py-2 border rounded-lg"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+            Submit Application
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white rounded-lg shadow-md p-12">
+      <h2 class="text-4xl font-semibold text-center mb-12">Contact Us</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Reach Out -->
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Reach Out</h3>
+          <p class="mb-4">
+            <strong>Email:</strong> 
+            <a href="mailto:jandgsoftwaresolutions@gmail.com" class="text-blue-600 hover:underline">
+              jandgsoftwaresolutions@gmail.com
+            </a>
+          </p>
+          <p class="mb-4">
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/jandgsoftware-solutions-72621034b/" target="_blank" class="text-blue-600 hover:underline">
+              J&amp;G Software Solutions
+            </a>
+          </p>
+        </div>
+        <!-- Store Address -->
+        <div class="text-right">
+          <h3 class="text-2xl font-bold mb-6">Visit Our Store</h3>
+          <p>
+            Palm Beach Outlets<br>
+            1721 Palm Beach Lakes Blvd<br>
+            West Palm Beach, FL 33401<br>
+            United States
+          </p>
+        </div>
+      </div>
+
+      <!-- Map Section -->
+      <div class="mt-8">
+        <div id="mapid"></div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="mt-12">
+        <h3 class="text-3xl font-bold text-center mb-8">Send Us a Message</h3>
+        <form class="max-w-lg mx-auto" action="#" method="post" id="contactForm">
+          <div class="mb-4">
+            <label for="name" class="block mb-2">Name</label>
+            <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg" required>
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block mb-2">Email</label>
+            <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg" required>
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" class="w-full px-3 py-2 border rounded-lg" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-4">J&G Software Solutions is a proud subsidiary of J&G Accessories</p>
+      <p>&copy; 2025 J&G Accessories. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map centered at Palm Beach Outlets
+    var map = L.map('mapid').setView([26.725945, -80.087815], 16);
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Invalidate map size after window loads to fix any rendering issues
+    window.addEventListener('load', function() {
+      map.invalidateSize();
+    });
+
+    // Prevent default submission for the career form, show alert, then reload the page
+    document.getElementById('careerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("J&G says: Your application has been submitted (demo).");
+      location.reload();
+    });
+
+    // Prevent default submission for the contact form, show alert, then reload the page
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("J&G says: Your application has been received (demo). ");
+      location.reload();
+    });
+  </script>
+</body>
+</html>
